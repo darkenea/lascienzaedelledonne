@@ -1,4 +1,65 @@
-<header>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <header>
     <img src="IMG-20251220-WA0021.jpg" alt="La scienza delle donne: giornale online">
     <h1>La Scienza delle Donne</h1>
-</header>
+    </header>
+    <meta charset="UTF-8">
+    <title>La Scienza delle Donne & Cruciverba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Exolve CSS (da CDN ufficiale, gratuito) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/viresh-ratnakar/exolve@latest/exolve-m.css">
+
+</head>
+<body>
+
+<h2>Cruciverba interattivo</h2>
+
+<div id="my-crossword"></div>
+
+<script src="https://cdn.jsdelivr.net/gh/viresh-ratnakar/exolve@latest/exolve-m.js"></script>
+
+<script>
+const puzzleSpec = `
+exolve-begin
+exolve-width: 15
+exolve-height: 15
+exolve-grid:
+...............  
+MEITNER...FISSI  
+...L...R...U....  
+...I...A...R....  
+...S...N...A....  
+...A...I...N....  
+LISAMEITNER....  
+...O...O........
+....HAHN..CIE...  
+...V.I.ENNA....  
+...I...L.O.......
+...D.O.N.N.A.....
+...N...S..O.....
+NAZISMO..C.......
+...SCIENZA.......
+exolve-across:
+1 Cognome della fisica austriaca co-scopritrice della fissione nucleare (7)
+5 Fenomeno nucleare studiato e interpretato da Lisa Meitner (7)
+7 Nome completo della scienziata che fuggì dalla Germania (12)
+9 Chimico con cui Meitner collaborò a lungo (4)
+10 Città dove Lisa Meitner nacque nel 1878 (6)
+exolve-down:
+1 Cognome della fisica austriaca co-scopritrice della fissione nucleare (7)
+2 Elemento chimico il cui nucleo fu al centro delle ricerche di Meitner (6)
+3 Parte centrale dell’atomo che si divide durante la fissione (6)
+4 Inizio della carriera scientifica in un campo allora maschile (5)
+6 Ideologia dalla quale Meitner dovette fuggire nel 1938 (7)
+8 Ambito in cui Lisa Meitner lasciò un segno importante (7)
+exolve-end
+`;
+
+createExolve(puzzleSpec, "my-crossword");
+</script>
+
+</body>
+
