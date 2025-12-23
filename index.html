@@ -2,89 +2,127 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>La scienza delle donne - Giornale Interattivo</title>
+    <title>La Scienza delle Donne</title>
+    <meta name="description" content="Giornale online dedicato alle donne nella scienza.">
+    <meta name="keywords" content="scienza, donne, giornale, Lisa Meitner, fisica, chimica">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        header { text-align: center; margin-bottom: 40px; }
-        article { border-bottom: 1px solid #ccc; padding-bottom: 20px; margin-bottom: 20px; }
-        h2 { color: #333; }
-        footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #666; }
+        /* Stile base */
+        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7; color:#333; }
+        header { text-align:center; background:#e0f7fa; padding:10px; }
+        header img { width:100%; max-height:300px; object-fit:cover; }
+        h1 { margin:10px 0; font-size:2em; }
+        main { max-width:900px; margin:20px auto; padding:0 10px; }
+        section { margin-bottom:40px; }
 
-        /* Stile cruciverba */
-        table { border-collapse: collapse; margin: 20px 0; }
-        td { border: 1px solid #333; width: 40px; height: 40px; text-align: center; }
-        input { width: 100%; height: 100%; border: none; text-align: center; font-size: 18px; text-transform: uppercase; }
-        button { padding: 10px 20px; margin-top: 10px; font-size: 16px; }
-        #risultato { font-weight: bold; margin-top: 10px; }
+        /* Sezione articoli */
+        .article { background:white; padding:15px; margin-bottom:15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+        .article h2 { margin-top:0; }
+
+        /* Cruciverba responsive */
+        .crossword { display: grid; grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); grid-gap:2px; justify-content:center; margin-top:20px; }
+        .cell { width:100%; padding-top:100%; position:relative; border:1px solid #333; }
+        .cell input { position:absolute; top:0; left:0; width:100%; height:100%; border:none; text-align:center; font-weight:bold; font-size:1em; text-transform:uppercase; background:transparent; }
+        button { display:block; margin:20px auto; padding:10px 20px; font-size:16px; cursor:pointer; border:none; border-radius:5px; background:#26a69a; color:white; }
+        .correct { background-color:#b8f2b8; }
+        .incorrect { background-color:#f2b8b8; }
     </style>
 </head>
 <body>
+    <header>
+        <img src="IMG-20251220-WA0021.jpg" alt="La scienza delle donne: giornale online">
+        <h1>La Scienza delle Donne</h1>
+    </header>
 
-<header>
-    <h1>La scienza delle donne</h1>
-    <p>Giornale online dedicato alla scienza e alle donne che l’hanno fatta</p>
-</header>
+    <main>
+        <!-- Sezione articoli -->
+        <section class="article">
+            <h2>Lisa Meitner</h2>
+            <p>Lisa Meitner fu una fisica austriaca che co-scoprì la fissione nucleare e contribuì enormemente alla scienza moderna. Dovette fuggire dalla Germania nel 1938 a causa del nazismo.</p>
+        </section>
 
-<article>
-    <h2>Curiosità scientifica del giorno</h2>
-    <p><strong>Autore:</strong> Enea | <strong>Data:</strong> 22 Dicembre 2025</p>
-    <p>Oggi parliamo di Lisa Meitner, la fisica che contribuì alla scoperta della fissione nucleare...</p>
-</article>
+        <section class="article">
+            <h2>Le scoperte scientifiche</h2>
+            <p>Meitner studiò il nucleo dell'uranio e collaborò con il chimico Otto Hahn per comprendere il fenomeno della fissione nucleare, lasciando un segno indelebile nella storia della fisica.</p>
+        </section>
 
-<article>
-    <h2>Donne nella storia della scienza</h2>
-    <p><strong>Autore:</strong> Enea | <strong>Data:</strong> 21 Dicembre 2025</p>
-    <p>Scopriamo il ruolo di Marie Curie e il suo contributo alla chimica moderna...</p>
-</article>
+        <!-- Cruciverba interattivo -->
+        <section>
+            <h2>Cruciverba interattivo</h2>
+            <div class="crossword" id="crossword"></div>
+            <button onclick="checkCrossword()">Controlla risposte</button>
 
-<section>
-    <h2>Cruciverba scientifico</h2>
-    <p>Inserisci le lettere corrette nella griglia:</p>
+            <div class="clues">
+                <h3>Indizi:</h3>
+                <ul>
+                    <li><strong>MEITNER</strong>: Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
+                    <li><strong>LISAMEITNER</strong>: Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
+                    <li><strong>FISSIONE</strong>: Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
+                    <li><strong>URANIO</strong>: Elemento chimico il cui nucleo fu al centro delle ricerche di Meitner.</li>
+                    <li><strong>HAHN</strong>: Chimico con cui Meitner collaborò a lungo.</li>
+                    <li><strong>NUCLEO</strong>: Parte centrale dell’atomo che si divide durante la fissione.</li>
+                    <li><strong>VIENNA</strong>: Città dove Lisa Meitner nacque nel 1878.</li>
+                    <li><strong>DONNA</strong>: Inizio della carriera scientifica in un campo allora quasi esclusivamente maschile.</li>
+                    <li><strong>NAZISMO</strong>: Ideologia dalla quale Meitner dovette fuggire nel 1938.</li>
+                    <li><strong>SCIENZA</strong>: Ambito in cui Lisa Meitner lasciò un segno importante.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-    <table>
-        <tr>
-            <td><input type="text" id="cella1" maxlength="1"></td>
-            <td><input type="text" id="cella2" maxlength="1"></td>
-            <td><input type="text" id="cella3" maxlength="1"></td>
-        </tr>
-        <tr>
-            <td><input type="text" id="cella4" maxlength="1"></td>
-            <td><input type="text" id="cella5" maxlength="1"></td>
-            <td><input type="text" id="cella6" maxlength="1"></td>
-        </tr>
-    </table>
-
-    <p>Definizioni:</p>
-    <ul>
-        <li>Orizzontale 1: Energia derivata dal Sole (3 lettere)</li>
-        <li>Verticale 2: Scienza che studia la materia (3 lettere)</li>
-    </ul>
-
-    <button onclick="controllaCruciverba()">Verifica</button>
-    <p id="risultato"></p>
-</section>
-
-<footer>
-    <p>&copy; 2025 La scienza delle donne</p>
-</footer>
-
-<script>
-function controllaCruciverba() {
-    // Soluzione: ORIZZONTALE = SOL, VERTICALE = ACE
-    const soluzione = ['S','O','L','A','C','E'];
-    let corretto = true;
-
-    for (let i = 1; i <= soluzione.length; i++) {
-        const cella = document.getElementById('cella' + i).value.toUpperCase();
-        if (cella !== soluzione[i-1]) {
-            corretto = false;
+    <script>
+        const gridSize = 15;
+        const crosswordEl = document.getElementById("crossword");
+        for (let i=0; i<gridSize*gridSize; i++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            const input = document.createElement("input");
+            input.setAttribute("maxlength","1");
+            input.dataset.index = i;
+            cell.appendChild(input);
+            crosswordEl.appendChild(cell);
         }
-    }
 
-    const risultato = document.getElementById('risultato');
-    risultato.textContent = corretto ? "Bravo! Tutto corretto 🎉" : "Qualcosa non va, riprova.";
-}
-</script>
+        const words = [
+            {word:"MEITNER", start:0, direction:'H'},
+            {word:"LISAMEITNER", start:16, direction:'V'},
+            {word:"FISSIONE", start:30, direction:'H'},
+            {word:"URANIO", start:47, direction:'V'},
+            {word:"HAHN", start:60, direction:'H'},
+            {word:"NUCLEO", start:75, direction:'V'},
+            {word:"VIENNA", start:90, direction:'H'},
+            {word:"DONNA", start:105, direction:'V'},
+            {word:"NAZISMO", start:120, direction:'H'},
+            {word:"SCIENZA", start:136, direction:'V'}
+        ];
 
+        words.forEach(w=>{
+            for(let i=0;i<w.word.length;i++){
+                let index=w.start;
+                if(w.direction==='H') index+=i;
+                if(w.direction==='V') index+=i*gridSize;
+                const input=crosswordEl.children[index].firstChild;
+                input.dataset.letter=w.word[i];
+            }
+        });
+
+        function checkCrossword(){
+            for(let i=0;i<gridSize*gridSize;i++){
+                const input=crosswordEl.children[i].firstChild;
+                if(!input.dataset.letter){
+                    input.classList.remove("correct","incorrect");
+                    continue;
+                }
+                if(input.value.toUpperCase()===input.dataset.letter.toUpperCase()){
+                    input.classList.add("correct");
+                    input.classList.remove("incorrect");
+                } else {
+                    input.classList.add("incorrect");
+                    input.classList.remove("correct");
+                }
+            }
+        }
+    </script>
 </body>
 </html>
