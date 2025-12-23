@@ -2,128 +2,157 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Cruciverba Lisa Meitner</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivista e Cruciverba – Lise Meitner</title>
 <style>
-body {font-family: Arial,sans-serif;text-align:center;background:#fafafa;margin:0;padding:20px;}
-table {border-collapse: collapse;margin:auto;}
-td {width:35px;height:35px;border:1px solid #000;position:relative;}
-td input {width:100%;height:100%;text-align:center;font-size:18px;text-transform:uppercase;border:none;background:transparent;}
-td.black {background:#000;}
-td .num {position:absolute;top:0;left:0;font-size:10px;padding:1px;color:#555;}
-button {padding:10px 15px;margin:5px;cursor:pointer;font-size:14px;}
-.soluzioni {display:none;text-align:left;margin-top:20px;max-width:400px;margin-left:auto;margin-right:auto;}
-h2,h3 {margin-bottom:10px;}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+img {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+.button {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+td {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    position: relative;
+}
+td input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    font-size: 18px;
+}
+td span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 10px;
+}
+.blank {
+    background: black;
+}
+.definizioni {
+    margin-top: 20px;
+}
 </style>
 </head>
 <body>
 
-<h2>Cruciverba - Lisa Meitner</h2>
+<header>
+<h1>Rivista Digitale – Lise Meitner</h1>
+</header>
 
-<div id="cruciverba-container">
-  <table id="crossword"></table>
-</div>
+<main>
+<h2>Copertina</h2>
+<img src="images/IMG-20251220-WA0021.jpg" alt="Copertina rivista">
 
-<div>
-  <button onclick="mostraTutte()">Mostra tutte le soluzioni</button>
-</div>
+<h2>Prima Pagina</h2>
+<img src="images/Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg" alt="Prima pagina rivista">
 
-<div id="soluzioni" class="soluzioni">
-  <h3>Soluzioni</h3>
-  <ol>
-    <li>MEITNER</li>
-    <li>LISAMEITNER</li>
-    <li>FISSIONE</li>
-    <li>URANIO</li>
-    <li>HAHN</li>
-    <li>NUCLEO</li>
-    <li>VIENNA</li>
-    <li>DONNA</li>
-    <li>NAZISMO</li>
-    <li>SCIENZA</li>
-  </ol>
-</div>
+<h2>Cruciverba Interattivo</h2>
+<table id="crossword">
+<tr>
+<td><span>1</span><input data-letter="L"></td>
+<td><input data-letter="I"></td>
+<td><input data-letter="S"></td>
+<td><input data-letter="E"></td>
+<td class="blank"></td>
+<td><span>2</span><input data-letter="M"></td>
+<td><input data-letter="E"></td>
+<td><input data-letter="I"></td>
+<td><input data-letter="T"></td>
+<td><input data-letter="N"></td>
+</tr>
+<tr>
+<td class="blank"></td><td class="blank"></td><td class="blank"></td>
+<td class="blank"></td><td class="blank"></td>
+<td><input data-letter="E"></td><td><input data-letter="R"></td>
+<td class="blank"></td><td class="blank"></td><td class="blank"></td>
+</tr>
+<tr>
+<td><span>3</span><input data-letter="A"></td>
+<td><input data-letter="U"></td><td><input data-letter="S"></td>
+<td><input data-letter="T"></td><td><input data-letter="R"></td>
+<td><input data-letter="I"></td><td><input data-letter="A"></td>
+<td class="blank"></td><td class="blank"></td><td class="blank"></td>
+</tr>
+<tr>
+<td class="blank"></td><td class="blank"></td><td class="blank"></td>
+<td><span>4</span><input data-letter="F"></td><td><input data-letter="I"></td>
+<td><input data-letter="S"></td><td><input data-letter="I"></td><td><input data-letter="C"></td>
+<td><input data-letter="A"></td><td class="blank"></td>
+</tr>
+<tr>
+<td class="blank"></td><td class="blank"></td><td class="blank"></td>
+<td class="blank"></td><td><span>5</span><input data-letter="U"></td>
+<td><input data-letter="R"></td><td><input data-letter="A"></td><td><input data-letter="N"></td>
+<td><input data-letter="I"></td><td><input data-letter="O"></td>
+</tr>
+</table>
 
-<h3>Indizi</h3>
-<ol style="max-width:400px;margin:auto;text-align:left;">
-  <li>MEITNER - Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
-  <li>LISAMEITNER - Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
-  <li>FISSIONE - Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
-  <li>URANIO - Elemento chimico al centro delle ricerche di Meitner.</li>
-  <li>HAHN - Chimico con cui Meitner collaborò a lungo.</li>
-  <li>NUCLEO - Parte centrale dell’atomo che si divide durante la fissione.</li>
-  <li>VIENNA - Città dove Lisa Meitner nacque nel 1878.</li>
-  <li>DONNA - Inizio della carriera scientifica in un campo allora quasi esclusivamente maschile.</li>
-  <li>NAZISMO - Ideologia dalla quale Meitner dovette fuggire nel 1938.</li>
-  <li>SCIENZA - Ambito in cui Lisa Meitner lasciò un segno importante.</li>
-</ol>
+<section class="definizioni">
+<h3>Orizzontali</h3>
+<ul>
+<li>1. Nome della scienziata</li>
+<li>2. Cognome della scienziata</li>
+<li>4. Materia di studio</li>
+<li>5. Elemento chimico studiato</li>
+</ul>
+
+<h3>Verticali</h3>
+<ul>
+<li>3. Paese di nascita</li>
+</ul>
+</section>
+
+<button class="button" onclick="mostraSoluzione()">Mostra Soluzione</button>
+</main>
+
+<footer>
+<p>Progetto Rivista Digitale – Lise Meitner</p>
+</footer>
 
 <script>
-// Definizione parole con posizione, direzione e numero
-const parole=[
-  {word:"MEITNER",row:0,col:0,dir:"across",num:1},
-  {word:"LISAMEITNER",row:2,col:0,dir:"across",num:2},
-  {word:"FISSIONE",row:4,col:0,dir:"across",num:3},
-  {word:"URANIO",row:6,col:0,dir:"across",num:4},
-  {word:"HAHN",row:8,col:0,dir:"across",num:5},
-  {word:"NUCLEO",row:0,col:2,dir:"down",num:6},
-  {word:"VIENNA",row:2,col:4,dir:"down",num:7},
-  {word:"DONNA",row:0,col:6,dir:"down",num:8},
-  {word:"NAZISMO",row:0,col:8,dir:"down",num:9},
-  {word:"SCIENZA",row:0,col:10,dir:"down",num:10}
-];
-
-const ROWS=12,COLS=12;
-let grid=[];
-
-// inizializza griglia
-for(let r=0;r<ROWS;r++){
-  grid[r]=[];
-  for(let c=0;c<COLS;c++){
-    grid[r][c]='';
-  }
-}
-
-// posiziona parole
-parole.forEach(p=>{
-  for(let i=0;i<p.word.length;i++){
-    let r=p.row+(p.dir=="down"?i:0);
-    let c=p.col+(p.dir=="across"?i:0);
-    grid[r][c]=p.word[i];
-  }
-});
-
-// genera tabella
-const table=document.getElementById("crossword");
-for(let r=0;r<ROWS;r++){
-  const tr=document.createElement("tr");
-  for(let c=0;c<COLS;c++){
-    const td=document.createElement("td");
-    if(grid[r][c]==''){
-      td.classList.add("black");
-    } else {
-      const input=document.createElement("input");
-      input.setAttribute("maxlength","1");
-      td.appendChild(input);
-      // numeri parole
-      parole.forEach(p=>{
-        if(p.row==r && p.col==c){
-          const num=document.createElement("span");
-          num.textContent=p.num;
-          num.classList.add("num");
-          td.appendChild(num);
-        }
-      });
-    }
-    tr.appendChild(td);
-  }
-  table.appendChild(tr);
-});
-
-// mostra tutte le soluzioni
-function mostraTutte(){
-  const div=document.getElementById("soluzioni");
-  div.style.display=div.style.display=="block"?"none":"block";
+function mostraSoluzione() {
+    document.querySelectorAll("#crossword input").forEach(input => {
+        input.value = input.dataset.letter;
+    });
 }
 </script>
 
