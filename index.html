@@ -1,142 +1,137 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>La scienza delle donne</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f0e8;
-  color: #222;
-}
-
-header {
-  background: #1e2a38;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-section {
-  padding: 30px 15px;
-}
-
-.rivista {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 20px;
-}
-
-@media (max-width: 900px) {
-  .rivista {
-    grid-template-columns: 1fr;
-  }
-}
-
-.box {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-h2 {
-  text-align: center;
-}
-
-/* CRUCIVERBA */
-.cruciverba {
-  display: grid;
-  grid-template-columns: repeat(10, 35px);
-  gap: 3px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.cruciverba input {
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>La Scienza delle Donne</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      width: 100%;
+      max-width: 500px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <h1>La scienza delle donne</h1>
-  <p>Numero speciale – Lisa Meitner</p>
-</header>
-
-<!-- COPERTINA -->
-<section>
-  <h2>Copertina</h2>
-  <div class="box" style="max-width:500px;margin:auto;">
-    <img src="IMG-20251220-WA0021.jpg" alt="Copertina La scienza delle donne">
-  </div>
-</section>
-
-<!-- IMPAGINAZIONE RIVISTA -->
-<section class="rivista">
-
-  <!-- COLONNA SINISTRA -->
-  <div class="box">
-    <h3>Curiosità</h3>
-    <p>Lisa Meitner non ricevette il Nobel, nonostante il suo ruolo chiave nella scoperta della fissione nucleare.</p>
-  </div>
-
-  <!-- CENTRO -->
-  <div class="box">
-    <h2>Prima pagina</h2>
-    <img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg"
-         alt="Prima pagina della rivista">
-  </div>
-
-  <!-- COLONNA DESTRA -->
-  <div class="box">
-    <h3>Lo sapevi?</h3>
-    <p>Il meitnerio (Mt) è un elemento chimico dedicato a Lisa Meitner.</p>
-  </div>
-
-</section>
-
-<!-- CRUCIVERBA -->
-<section>
-  <h2>Cruciverba</h2>
-
-  <div class="cruciverba">
-    <!-- MEITNER -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <!-- LISAMEITNER -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <!-- FISSIONE -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <!-- URANIO -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-  </div>
-
-  <div class="box" style="max-width:800px;margin:30px auto;">
-    <h3>Indizi</h3>
-    <ol>
-      <li>Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
-      <li>Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
-      <li>Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
-      <li>Elemento chimico al centro delle ricerche.</li>
-    </ol>
-  </div>
-
-</section>
+<a href="pagina1.html">
+  <img src="IMG-20251220-WA0021.jpg" alt="Copertina La Scienza delle Donne">
+</a>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Prima pagina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #eee;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      max-width: 800px;
+    }
+    .nav {
+      margin: 20px;
+    }
+    a {
+      margin: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg"
+     alt="Prima pagina rivista">
+
+<div class="nav">
+  <a href="index.html">← Indietro</a>
+  <a href="cruciverba.html">Avanti →</a>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Cruciverba</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fafafa;
+      text-align: center;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid #000;
+      width: 35px;
+      height: 35px;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 18px;
+      border: none;
+      text-transform: uppercase;
+    }
+    .black {
+      background: #000;
+    }
+    .nav {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Cruciverba – Lisa Meitner</h2>
+
+<table>
+  <tr>
+    <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
+  </tr>
+  <tr>
+    <td class="black"></td><td class="black"></td><td><input></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
+  </tr>
+  <tr>
+    <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
+  </tr>
+</table>
+
+<p><b>Orizzontali</b><br>
+1. Cognome della fisica austriaca (7)<br>
+2. Fenomeno nucleare studiato da Meitner (7)
+</p>
+
+<p><b>Verticale</b><br>
+1. Parte centrale dell’atomo (6)
+</p>
+
+<div class="nav">
+  <a href="pagina1.html">← Indietro</a>
+</div>
+
+</body>
+</html>
+
