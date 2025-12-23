@@ -1,135 +1,124 @@
-<header>
-    <img src="IMG-20251220-WA0021.jpg" alt="La scienza delle donne: giornale online">
-    <h1>La Scienza delle Donne</h1>
-</header>
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Cruciverba Lisa Meitner</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {font-family: Arial,sans-serif;text-align:center;background:#fafafa;margin:0;padding:20px;}
-table {border-collapse: collapse;margin:auto;}
-td {width:35px;height:35px;border:1px solid #000;position:relative;}
-td input {width:100%;height:100%;text-align:center;font-size:18px;text-transform:uppercase;border:none;background:transparent;}
-td.black {background:#000;}
-td .num {position:absolute;top:0;left:0;font-size:10px;padding:1px;color:#555;}
-button {padding:10px 15px;margin:5px;cursor:pointer;font-size:14px;}
-.soluzioni {display:none;text-align:left;margin-top:20px;max-width:400px;margin-left:auto;margin-right:auto;}
-h2,h3 {margin-bottom:10px;}
-</style>
+    <meta charset="UTF-8">
+    <title>La Scienza delle Donne</title>
+    <meta name="description" content="Giornale online dedicato alle donne nella scienza.">
+    <meta name="keywords" content="scienza, donne, giornale, Lise Meitner, fisica, laboratorio, curiosità">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0; padding: 0;
+            background: #fdf6e3;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: #e0f7fa;
+        }
+        header img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        h1 { margin: 10px 0; }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+
+        section.article {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        section.article img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .crossword-container {
+            grid-column: 1 / -1;
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .curiosity {
+            background: #ffe0b2;
+            padding: 10px;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: #ff9800;
+            margin: 20px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<h2>Cruciverba - Lisa Meitner</h2>
+<header>
+    <img src="IMG-20251220-WA0021.jpg" alt="Copertina La Scienza delle Donne">
+    <h1>La Scienza delle Donne</h1>
+</header>
 
-<div id="cruciverba-container">
-  <table id="crossword"></table>
-</div>
+<main>
+    <section class="article">
+        <h2>Chi era Lise Meitner</h2>
+        <img src="Lise_Meitner_NatGeo.jpg" alt="Ritratto di Lise Meitner, fisica austriaca noto ritratto storico">
+        <p>Lise Meitner fu una fisica austriaca che contribuì alla scoperta della fissione nucleare, affrontando pregiudizi e difficoltà nella sua carriera scientifica. 6</p>
+    </section>
 
-<div>
-  <button onclick="mostraTutte()">Mostra tutte le soluzioni</button>
-</div>
+    <aside class="curiosity">
+        <strong>Curiosità:</strong> Il suo contributo alla fisica è così influente che l’elemento 109 è stato chiamato “meitnerium” in suo onore.
+    </aside>
 
-<div id="soluzioni" class="soluzioni">
-  <h3>Soluzioni</h3>
-  <ol>
-    <li>MEITNER</li>
-    <li>LISAMEITNER</li>
-    <li>FISSIONE</li>
-    <li>URANIO</li>
-    <li>HAHN</li>
-    <li>NUCLEO</li>
-    <li>VIENNA</li>
-    <li>DONNA</li>
-    <li>NAZISMO</li>
-    <li>SCIENZA</li>
-  </ol>
-</div>
+    <hr>
 
-<h3>Indizi</h3>
-<ol style="max-width:400px;margin:auto;text-align:left;">
-  <li>MEITNER - Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
-  <li>LISAMEITNER - Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
-  <li>FISSIONE - Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
-  <li>URANIO - Elemento chimico al centro delle ricerche di Meitner.</li>
-  <li>HAHN - Chimico con cui Meitner collaborò a lungo.</li>
-  <li>NUCLEO - Parte centrale dell’atomo che si divide durante la fissione.</li>
-  <li>VIENNA - Città dove Lisa Meitner nacque nel 1878.</li>
-  <li>DONNA - Inizio della carriera scientifica in un campo allora quasi esclusivamente maschile.</li>
-  <li>NAZISMO - Ideologia dalla quale Meitner dovette fuggire nel 1938.</li>
-  <li>SCIENZA - Ambito in cui Lisa Meitner lasciò un segno importante.</li>
-</ol>
+    <section class="crossword-container">
+        <h2>Cruciverba Interattivo</h2>
+        <p>[Inserisci qui il tuo cruciverba]</p>
+    </section>
 
-<script>
-// Definizione parole con posizione, direzione e numero
-const parole=[
-  {word:"MEITNER",row:0,col:0,dir:"across",num:1},
-  {word:"LISAMEITNER",row:2,col:0,dir:"across",num:2},
-  {word:"FISSIONE",row:4,col:0,dir:"across",num:3},
-  {word:"URANIO",row:6,col:0,dir:"across",num:4},
-  {word:"HAHN",row:8,col:0,dir:"across",num:5},
-  {word:"NUCLEO",row:0,col:2,dir:"down",num:6},
-  {word:"VIENNA",row:2,col:4,dir:"down",num:7},
-  {word:"DONNA",row:0,col:6,dir:"down",num:8},
-  {word:"NAZISMO",row:0,col:8,dir:"down",num:9},
-  {word:"SCIENZA",row:0,col:10,dir:"down",num:10}
-];
+    <hr>
 
-const ROWS=12,COLS=12;
-let grid=[];
+    <section class="article">
+        <h2>La scienza in laboratorio</h2>
+        <img src="science-lab1.jpg" alt="Ambiente di laboratorio scientifico">
+        <p>La scienza moderna si costruisce anche grazie al lavoro in laboratorio e all’esperimento. 7</p>
+    </section>
 
-// inizializza griglia
-for(let r=0;r<ROWS;r++){
-  grid[r]=[];
-  for(let c=0;c<COLS;c++){
-    grid[r][c]='';
-  }
-}
+    <aside class="curiosity">
+        <strong>Curiosità:</strong> Molte donne oggi lavorano nella ricerca scientifica, cambiando il volto della scienza moderna.
+    </aside>
 
-// posiziona parole
-parole.forEach(p=>{
-  for(let i=0;i<p.word.length;i++){
-    let r=p.row+(p.dir=="down"?i:0);
-    let c=p.col+(p.dir=="across"?i:0);
-    grid[r][c]=p.word[i];
-  }
-});
+    <section class="article">
+        <img src="science-female.jpg" alt="Scienziata al lavoro in laboratorio">
+        <p>Le scienziate continuano a essere protagoniste in numerosi campi di ricerca, dall’energia nucleare alla biotecnologia. 8</p>
+    </section>
 
-// genera tabella
-const table=document.getElementById("crossword");
-for(let r=0;r<ROWS;r++){
-  const tr=document.createElement("tr");
-  for(let c=0;c<COLS;c++){
-    const td=document.createElement("td");
-    if(grid[r][c]==''){
-      td.classList.add("black");
-    } else {
-      const input=document.createElement("input");
-      input.setAttribute("maxlength","1");
-      td.appendChild(input);
-      // numeri parole
-      parole.forEach(p=>{
-        if(p.row==r && p.col==c){
-          const num=document.createElement("span");
-          num.textContent=p.num;
-          num.classList.add("num");
-          td.appendChild(num);
-        }
-      });
-    }
-    tr.appendChild(td);
-  }
-  table.appendChild(tr);
-});
-
-// mostra tutte le soluzioni
-function mostraTutte(){
-  const div=document.getElementById("soluzioni");
-  div.style.display=div.style.display=="block"?"none":"block";
-}
-</script>
+</main>
 
 </body>
 </html>
