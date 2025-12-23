@@ -1,250 +1,128 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>La Scienza delle Donne</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f0e8;
-  color: #222;
-  text-align: center;
-}
-.page {
-  display: none;
-  padding: 20px;
-}
-.page img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-}
-.nav {
-  margin-top: 20px;
-}
-button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.cruciverba {
-  display: grid;
-  grid-template-columns: repeat(10, 35px);
-  gap: 3px;
-  justify-content: center;
-  margin-top: 20px;
-}
-.cruciverba input {
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-h2 {
-  margin-bottom: 15px;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>La Scienza delle Donne</title>
+    <meta name="description" content="Giornale online dedicato alle donne nella scienza.">
+    <meta name="keywords" content="scienza, donne, giornale, Lisa Meitner, fisica, chimica">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Stile base */
+        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7; color:#333; }
+        header { text-align:center; background:#e0f7fa; padding:10px; }
+        header img { width:100%; max-height:300px; object-fit:cover; }
+        h1 { margin:10px 0; font-size:2em; }
+        main { max-width:900px; margin:20px auto; padding:0 10px; }
+        section { margin-bottom:40px; }
+
+        /* Sezione articoli */
+        .article { background:white; padding:15px; margin-bottom:15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+        .article h2 { margin-top:0; }
+
+        /* Cruciverba responsive */
+        .crossword { display: grid; grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); grid-gap:2px; justify-content:center; margin-top:20px; }
+        .cell { width:100%; padding-top:100%; position:relative; border:1px solid #333; }
+        .cell input { position:absolute; top:0; left:0; width:100%; height:100%; border:none; text-align:center; font-weight:bold; font-size:1em; text-transform:uppercase; background:transparent; }
+        button { display:block; margin:20px auto; padding:10px 20px; font-size:16px; cursor:pointer; border:none; border-radius:5px; background:#26a69a; color:white; }
+        .correct { background-color:#b8f2b8; }
+        .incorrect { background-color:#f2b8b8; }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="IMG-20251220-WA0021.jpg" alt="La scienza delle donne: giornale online">
+        <h1>La Scienza delle Donne</h1>
+    </header>
 
-<!-- COPERTINA -->
-<div class="page" id="copertina" style="display:block;">
-  <h2>La Scienza delle Donne - Copertina</h2>
-  <img src="IMG-20251220-WA0021.jpg" alt="Copertina La Scienza delle Donne">
-  <div class="nav">
-    <button onclick="showPage('pagina1')">Sfoglia →</button>
-  </div>
-</div>
+    <main>
+        <!-- Sezione articoli -->
+        <section class="article">
+            <h2>Lisa Meitner</h2>
+            <p>Lisa Meitner fu una fisica austriaca che co-scoprì la fissione nucleare e contribuì enormemente alla scienza moderna. Dovette fuggire dalla Germania nel 1938 a causa del nazismo.</p>
+        </section>
 
-<!-- PRIMA PAGINA -->
-<div class="page" id="pagina1">
-  <h2>Prima pagina</h2>
-  <img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg" alt="Prima pagina rivista">
-  <div class="nav">
-    <button onclick="showPage('copertina')">← Indietro</button>
-    <button onclick="showPage('cruciverba')">Avanti →</button>
-  </div>
-</div>
+        <section class="article">
+            <h2>Le scoperte scientifiche</h2>
+            <p>Meitner studiò il nucleo dell'uranio e collaborò con il chimico Otto Hahn per comprendere il fenomeno della fissione nucleare, lasciando un segno indelebile nella storia della fisica.</p>
+        </section>
 
-<!-- CRUCIVERBA -->
-<div class="page" id="cruciverba">
-  <h2>Cruciverba Interattivo</h2>
+        <!-- Cruciverba interattivo -->
+        <section>
+            <h2>Cruciverba interattivo</h2>
+            <div class="crossword" id="crossword"></div>
+            <button onclick="checkCrossword()">Controlla risposte</button>
 
-  <div class="cruciverba">
-    <!-- Esempio griglia 10x10, puoi modificare parole/incroci reali -->
-    <!-- Riga 1 -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <!-- Riga 2 -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <!-- Riga 3 -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <!-- Riga 4 -->
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-  </div>
+            <div class="clues">
+                <h3>Indizi:</h3>
+                <ul>
+                    <li><strong>MEITNER</strong>: Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
+                    <li><strong>LISAMEITNER</strong>: Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
+                    <li><strong>FISSIONE</strong>: Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
+                    <li><strong>URANIO</strong>: Elemento chimico il cui nucleo fu al centro delle ricerche di Meitner.</li>
+                    <li><strong>HAHN</strong>: Chimico con cui Meitner collaborò a lungo.</li>
+                    <li><strong>NUCLEO</strong>: Parte centrale dell’atomo che si divide durante la fissione.</li>
+                    <li><strong>VIENNA</strong>: Città dove Lisa Meitner nacque nel 1878.</li>
+                    <li><strong>DONNA</strong>: Inizio della carriera scientifica in un campo allora quasi esclusivamente maschile.</li>
+                    <li><strong>NAZISMO</strong>: Ideologia dalla quale Meitner dovette fuggire nel 1938.</li>
+                    <li><strong>SCIENZA</strong>: Ambito in cui Lisa Meitner lasciò un segno importante.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-  <!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<title>La Scienza delle Donne - Rivista</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {margin:0;font-family:Arial,sans-serif;text-align:center;background:#f4f0e8;color:#222;}
-.page {display:none;padding:20px;}
-.page img {max-width:90%;height:auto;border-radius:10px;}
-.nav {margin-top:20px;}
-button {padding:10px 20px;margin:5px;font-size:16px;cursor:pointer;}
-h2 {margin-bottom:15px;}
-
-/* CRUCIVERBA */
-#cruciverba-container {display:inline-block;margin-top:20px;}
-table {border-collapse:collapse;}
-td {width:35px;height:35px;border:1px solid #000;position:relative;}
-td input {width:100%;height:100%;text-align:center;font-size:18px;text-transform:uppercase;border:none;background:transparent;}
-td.black {background:#000;}
-td .num {position:absolute;top:0;left:0;font-size:10px;padding:1px;color:#555;}
-
-.soluzione {display:none;margin-top:10px;max-width:400px;text-align:left;}
-</style>
-</head>
-<body>
-
-<!-- COPERTINA -->
-<div class="page" id="copertina" style="display:block;">
-  <h2>La Scienza delle Donne - Copertina</h2>
-  <img src="IMG-20251220-WA0021.jpg" alt="Copertina La Scienza delle Donne">
-  <div class="nav">
-    <button onclick="showPage('pagina1')">Sfoglia →</button>
-  </div>
-</div>
-
-<!-- PRIMA PAGINA -->
-<div class="page" id="pagina1">
-  <h2>Prima pagina</h2>
-  <img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg" alt="Prima pagina rivista">
-  <div class="nav">
-    <button onclick="showPage('copertina')">← Indietro</button>
-    <button onclick="showPage('cruciverba')">Avanti →</button>
-  </div>
-</div>
-
-<!-- CRUCIVERBA -->
-<div class="page" id="cruciverba">
-  <h2>Cruciverba Interattivo</h2>
-  <div id="cruciverba-container">
-    <table id="crossword">
-      <!-- La griglia sarà generata da JS -->
-    </table>
-  </div>
-
-  <div class="nav">
-    <button onclick="showPage('pagina1')">← Indietro</button>
-    <button onclick="mostraTutte()">Mostra tutte le soluzioni</button>
-  </div>
-
-  <div id="soluzioni" class="soluzione">
-    <h3>Soluzioni</h3>
-    <ol>
-      <li>MEITNER</li>
-      <li>LISAMEITNER</li>
-      <li>FISSIONE</li>
-      <li>URANIO</li>
-      <li>HAHN</li>
-      <li>NUCLEO</li>
-      <li>VIENNA</li>
-      <li>DONNA</li>
-      <li>NAZISMO</li>
-      <li>SCIENZA</li>
-    </ol>
-  </div>
-</div>
-
-<script>
-/* FUNZIONI PAGINE */
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.style.display='none');
-  document.getElementById(id).style.display='block';
-}
-
-/* GRIGLIA CRUCIVERBA */
-const parole=[
-  {word:"MEITNER",row:0,col:0,dir:"across",num:1},
-  {word:"LISAMEITNER",row:2,col:0,dir:"across",num:2},
-  {word:"FISSIONE",row:4,col:0,dir:"across",num:3},
-  {word:"URANIO",row:6,col:0,dir:"across",num:4},
-  {word:"HAHN",row:8,col:0,dir:"across",num:5},
-  {word:"NUCLEO",row:0,col:2,dir:"down",num:6},
-  {word:"VIENNA",row:2,col:4,dir:"down",num:7},
-  {word:"DONNA",row:0,col:6,dir:"down",num:8},
-  {word:"NAZISMO",row:0,col:8,dir:"down",num:9},
-  {word:"SCIENZA",row:0,col:10,dir:"down",num:10}
-];
-
-const ROWS=12,COLS=12;
-let grid=[];
-
-// inizializza griglia
-for(let r=0;r<ROWS;r++){
-  grid[r]=[];
-  for(let c=0;c<COLS;c++){
-    grid[r][c]='';
-  }
-}
-
-// popola parole
-parole.forEach(p=>{
-  for(let i=0;i<p.word.length;i++){
-    let r=p.row+(p.dir=="down"?i:0);
-    let c=p.col+(p.dir=="across"?i:0);
-    grid[r][c]=p.word[i];
-  }
-});
-
-// genera tabella
-const table=document.getElementById("crossword");
-for(let r=0;r<ROWS;r++){
-  const tr=document.createElement("tr");
-  for(let c=0;c<COLS;c++){
-    const td=document.createElement("td");
-    if(grid[r][c]==''){
-      td.classList.add("black");
-    } else {
-      const input=document.createElement("input");
-      input.setAttribute("maxlength","1");
-      td.appendChild(input);
-      // numeri parole
-      parole.forEach(p=>{
-        if(p.row==r && p.col==c){
-          const num=document.createElement("span");
-          num.textContent=p.num;
-          num.classList.add("num");
-          td.appendChild(num);
+    <script>
+        const gridSize = 15;
+        const crosswordEl = document.getElementById("crossword");
+        for (let i=0; i<gridSize*gridSize; i++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            const input = document.createElement("input");
+            input.setAttribute("maxlength","1");
+            input.dataset.index = i;
+            cell.appendChild(input);
+            crosswordEl.appendChild(cell);
         }
-      });
-    }
-    tr.appendChild(td);
-  }
-  table.appendChild(tr);
-});
 
-/* MOSTRA SOLUZIONI */
-function mostraTutte(){
-  const div=document.getElementById("soluzioni");
-  div.style.display=div.style.display=="block"?"none":"block";
-}
-</script>
+        const words = [
+            {word:"MEITNER", start:0, direction:'H'},
+            {word:"LISAMEITNER", start:16, direction:'V'},
+            {word:"FISSIONE", start:30, direction:'H'},
+            {word:"URANIO", start:47, direction:'V'},
+            {word:"HAHN", start:60, direction:'H'},
+            {word:"NUCLEO", start:75, direction:'V'},
+            {word:"VIENNA", start:90, direction:'H'},
+            {word:"DONNA", start:105, direction:'V'},
+            {word:"NAZISMO", start:120, direction:'H'},
+            {word:"SCIENZA", start:136, direction:'V'}
+        ];
 
-</body>
-</html>
-</script>
+        words.forEach(w=>{
+            for(let i=0;i<w.word.length;i++){
+                let index=w.start;
+                if(w.direction==='H') index+=i;
+                if(w.direction==='V') index+=i*gridSize;
+                const input=crosswordEl.children[index].firstChild;
+                input.dataset.letter=w.word[i];
+            }
+        });
 
+        function checkCrossword(){
+            for(let i=0;i<gridSize*gridSize;i++){
+                const input=crosswordEl.children[i].firstChild;
+                if(!input.dataset.letter){
+                    input.classList.remove("correct","incorrect");
+                    continue;
+                }
+                if(input.value.toUpperCase()===input.dataset.letter.toUpperCase()){
+                    input.classList.add("correct");
+                    input.classList.remove("incorrect");
+                } else {
+                    input.classList.add("incorrect");
+                    input.classList.remove("correct");
+                }
+            }
+        }
+    </script>
 </body>
 </html>
