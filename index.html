@@ -1,66 +1,142 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <header>
-    <img src="IMG-20251220-WA0021.jpg" alt="La scienza delle donne: giornale online">
-    <h1>La Scienza delle Donne</h1>
-    </header>
-    <meta charset="UTF-8">
-    <title>La Scienza delle Donne & Cruciverba</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>La scienza delle donne</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Exolve CSS (da CDN ufficiale, gratuito) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/viresh-ratnakar/exolve@latest/exolve-m.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f0e8;
+  color: #222;
+}
 
+header {
+  background: #1e2a38;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 30px 15px;
+}
+
+.rivista {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .rivista {
+    grid-template-columns: 1fr;
+  }
+}
+
+.box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* CRUCIVERBA */
+.cruciverba {
+  display: grid;
+  grid-template-columns: repeat(10, 35px);
+  gap: 3px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cruciverba input {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+</style>
 </head>
+
 <body>
 
-<h2>Cruciverba interattivo</h2>
+<header>
+  <h1>La scienza delle donne</h1>
+  <p>Numero speciale – Lisa Meitner</p>
+</header>
 
-<div id="my-crossword"></div>
+<!-- COPERTINA -->
+<section>
+  <h2>Copertina</h2>
+  <div class="box" style="max-width:500px;margin:auto;">
+    <img src="IMG-20251220-WA0021.jpg" alt="Copertina La scienza delle donne">
+  </div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/gh/viresh-ratnakar/exolve@latest/exolve-m.js"></script>
+<!-- IMPAGINAZIONE RIVISTA -->
+<section class="rivista">
 
-<script>
-const puzzleSpec = `
-exolve-begin
-exolve-width: 15
-exolve-height: 15
-exolve-grid:
-...............  
-MEITNER...FISSI  
-...L...R...U....  
-...I...A...R....  
-...S...N...A....  
-...A...I...N....  
-LISAMEITNER....  
-...O...O........
-....HAHN..CIE...  
-...V.I.ENNA....  
-...I...L.O.......
-...D.O.N.N.A.....
-...N...S..O.....
-NAZISMO..C.......
-...SCIENZA.......
-exolve-across:
-1 Cognome della fisica austriaca co-scopritrice della fissione nucleare (7)
-5 Fenomeno nucleare studiato e interpretato da Lisa Meitner (7)
-7 Nome completo della scienziata che fuggì dalla Germania (12)
-9 Chimico con cui Meitner collaborò a lungo (4)
-10 Città dove Lisa Meitner nacque nel 1878 (6)
-exolve-down:
-1 Cognome della fisica austriaca co-scopritrice della fissione nucleare (7)
-2 Elemento chimico il cui nucleo fu al centro delle ricerche di Meitner (6)
-3 Parte centrale dell’atomo che si divide durante la fissione (6)
-4 Inizio della carriera scientifica in un campo allora maschile (5)
-6 Ideologia dalla quale Meitner dovette fuggire nel 1938 (7)
-8 Ambito in cui Lisa Meitner lasciò un segno importante (7)
-exolve-end
-`;
+  <!-- COLONNA SINISTRA -->
+  <div class="box">
+    <h3>Curiosità</h3>
+    <p>Lisa Meitner non ricevette il Nobel, nonostante il suo ruolo chiave nella scoperta della fissione nucleare.</p>
+  </div>
 
-createExolve(puzzleSpec, "my-crossword");
-</script>
+  <!-- CENTRO -->
+  <div class="box">
+    <h2>Prima pagina</h2>
+    <img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg"
+         alt="Prima pagina della rivista">
+  </div>
+
+  <!-- COLONNA DESTRA -->
+  <div class="box">
+    <h3>Lo sapevi?</h3>
+    <p>Il meitnerio (Mt) è un elemento chimico dedicato a Lisa Meitner.</p>
+  </div>
+
+</section>
+
+<!-- CRUCIVERBA -->
+<section>
+  <h2>Cruciverba</h2>
+
+  <div class="cruciverba">
+    <!-- MEITNER -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <!-- LISAMEITNER -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <!-- FISSIONE -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <!-- URANIO -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+  </div>
+
+  <div class="box" style="max-width:800px;margin:30px auto;">
+    <h3>Indizi</h3>
+    <ol>
+      <li>Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
+      <li>Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
+      <li>Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
+      <li>Elemento chimico al centro delle ricerche.</li>
+    </ol>
+  </div>
+
+</section>
 
 </body>
-
-    
+</html>
