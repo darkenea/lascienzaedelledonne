@@ -1,158 +1,88 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rivista e Cruciverba – Lise Meitner</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-header, footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-img {
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-h2 {
-    text-align: center;
-    margin-top: 30px;
-}
-.button {
-    display: inline-block;
-    background: #0066cc;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin: 10px 0;
-    cursor: pointer;
-}
-table {
-    border-collapse: collapse;
-    margin: 20px auto;
-}
-td {
-    width: 40px;
-    height: 40px;
-    border: 2px solid black;
-    position: relative;
-}
-td input {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    border: none;
-    font-size: 18px;
-}
-td span {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    font-size: 10px;
-}
-.blank {
-    background: black;
-}
-.definizioni {
-    margin-top: 20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>La scienza delle donne - Giornale Interattivo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header { text-align: center; margin-bottom: 40px; }
+        article { border-bottom: 1px solid #ccc; padding-bottom: 20px; margin-bottom: 20px; }
+        h2 { color: #333; }
+        footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #666; }
+
+        /* Stile cruciverba */
+        table { border-collapse: collapse; margin: 20px 0; }
+        td { border: 1px solid #333; width: 40px; height: 40px; text-align: center; }
+        input { width: 100%; height: 100%; border: none; text-align: center; font-size: 18px; text-transform: uppercase; }
+        button { padding: 10px 20px; margin-top: 10px; font-size: 16px; }
+        #risultato { font-weight: bold; margin-top: 10px; }
+    </style>
 </head>
 <body>
 
 <header>
-<h1>Rivista Digitale – Lise Meitner</h1>
+    <h1>La scienza delle donne</h1>
+    <p>Giornale online dedicato alla scienza e alle donne che l’hanno fatta</p>
 </header>
 
-<main>
-<h2>Copertina</h2>
-<img src="images/IMG-20251220-WA0021.jpg" alt="Copertina rivista">
+<article>
+    <h2>Curiosità scientifica del giorno</h2>
+    <p><strong>Autore:</strong> Enea | <strong>Data:</strong> 22 Dicembre 2025</p>
+    <p>Oggi parliamo di Lisa Meitner, la fisica che contribuì alla scoperta della fissione nucleare...</p>
+</article>
 
-<h2>Prima Pagina</h2>
-<img src="images/Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg" alt="Prima pagina rivista">
+<article>
+    <h2>Donne nella storia della scienza</h2>
+    <p><strong>Autore:</strong> Enea | <strong>Data:</strong> 21 Dicembre 2025</p>
+    <p>Scopriamo il ruolo di Marie Curie e il suo contributo alla chimica moderna...</p>
+</article>
 
-<h2>Cruciverba Interattivo</h2>
-<table id="crossword">
-<tr>
-<td><span>1</span><input data-letter="L"></td>
-<td><input data-letter="I"></td>
-<td><input data-letter="S"></td>
-<td><input data-letter="E"></td>
-<td class="blank"></td>
-<td><span>2</span><input data-letter="M"></td>
-<td><input data-letter="E"></td>
-<td><input data-letter="I"></td>
-<td><input data-letter="T"></td>
-<td><input data-letter="N"></td>
-</tr>
-<tr>
-<td class="blank"></td><td class="blank"></td><td class="blank"></td>
-<td class="blank"></td><td class="blank"></td>
-<td><input data-letter="E"></td><td><input data-letter="R"></td>
-<td class="blank"></td><td class="blank"></td><td class="blank"></td>
-</tr>
-<tr>
-<td><span>3</span><input data-letter="A"></td>
-<td><input data-letter="U"></td><td><input data-letter="S"></td>
-<td><input data-letter="T"></td><td><input data-letter="R"></td>
-<td><input data-letter="I"></td><td><input data-letter="A"></td>
-<td class="blank"></td><td class="blank"></td><td class="blank"></td>
-</tr>
-<tr>
-<td class="blank"></td><td class="blank"></td><td class="blank"></td>
-<td><span>4</span><input data-letter="F"></td><td><input data-letter="I"></td>
-<td><input data-letter="S"></td><td><input data-letter="I"></td><td><input data-letter="C"></td>
-<td><input data-letter="A"></td><td class="blank"></td>
-</tr>
-<tr>
-<td class="blank"></td><td class="blank"></td><td class="blank"></td>
-<td class="blank"></td><td><span>5</span><input data-letter="U"></td>
-<td><input data-letter="R"></td><td><input data-letter="A"></td><td><input data-letter="N"></td>
-<td><input data-letter="I"></td><td><input data-letter="O"></td>
-</tr>
-</table>
+<section>
+    <h2>Cruciverba scientifico</h2>
+    <p>Inserisci le lettere corrette nella griglia:</p>
 
-<section class="definizioni">
-<h3>Orizzontali</h3>
-<ul>
-<li>1. Nome della scienziata</li>
-<li>2. Cognome della scienziata</li>
-<li>4. Materia di studio</li>
-<li>5. Elemento chimico studiato</li>
-</ul>
+    <table>
+        <tr>
+            <td><input type="text" id="cella1" maxlength="1"></td>
+            <td><input type="text" id="cella2" maxlength="1"></td>
+            <td><input type="text" id="cella3" maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="cella4" maxlength="1"></td>
+            <td><input type="text" id="cella5" maxlength="1"></td>
+            <td><input type="text" id="cella6" maxlength="1"></td>
+        </tr>
+    </table>
 
-<h3>Verticali</h3>
-<ul>
-<li>3. Paese di nascita</li>
-</ul>
+    <p>Definizioni:</p>
+    <ul>
+        <li>Orizzontale 1: Energia derivata dal Sole (3 lettere)</li>
+        <li>Verticale 2: Scienza che studia la materia (3 lettere)</li>
+    </ul>
+
+    <button onclick="controllaCruciverba()">Verifica</button>
+    <p id="risultato"></p>
 </section>
 
-<button class="button" onclick="mostraSoluzione()">Mostra Soluzione</button>
-</main>
-
 <footer>
-<p>Progetto Rivista Digitale – Lise Meitner</p>
+    <p>&copy; 2025 La scienza delle donne</p>
 </footer>
 
 <script>
-function mostraSoluzione() {
-    document.querySelectorAll("#crossword input").forEach(input => {
-        input.value = input.dataset.letter;
-    });
+function controllaCruciverba() {
+    // Soluzione: ORIZZONTALE = SOL, VERTICALE = ACE
+    const soluzione = ['S','O','L','A','C','E'];
+    let corretto = true;
+
+    for (let i = 1; i <= soluzione.length; i++) {
+        const cella = document.getElementById('cella' + i).value.toUpperCase();
+        if (cella !== soluzione[i-1]) {
+            corretto = false;
+        }
+    }
+
+    const risultato = document.getElementById('risultato');
+    risultato.textContent = corretto ? "Bravo! Tutto corretto 🎉" : "Qualcosa non va, riprova.";
 }
 </script>
 
