@@ -1,137 +1,123 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>La Scienza delle Donne</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    img {
-      width: 100%;
-      max-width: 500px;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>La Scienza delle Donne</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f0e8;
+  color: #222;
+  text-align: center;
+}
+.page {
+  display: none;
+  padding: 20px;
+}
+.page img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+.nav {
+  margin-top: 20px;
+}
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cruciverba {
+  display: grid;
+  grid-template-columns: repeat(10, 35px);
+  gap: 3px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cruciverba input {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+h2 {
+  margin-bottom: 15px;
+}
+</style>
 </head>
 <body>
 
-<a href="pagina1.html">
+<!-- COPERTINA -->
+<div class="page" id="copertina" style="display:block;">
+  <h2>La Scienza delle Donne - Copertina</h2>
   <img src="IMG-20251220-WA0021.jpg" alt="Copertina La Scienza delle Donne">
-</a>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Prima pagina</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: #eee;
-      text-align: center;
-    }
-    img {
-      width: 100%;
-      max-width: 800px;
-    }
-    .nav {
-      margin: 20px;
-    }
-    a {
-      margin: 10px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-  </style>
-</head>
-<body>
-
-<img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg"
-     alt="Prima pagina rivista">
-
-<div class="nav">
-  <a href="index.html">← Indietro</a>
-  <a href="cruciverba.html">Avanti →</a>
+  <div class="nav">
+    <button onclick="showPage('pagina1')">Sfoglia →</button>
+  </div>
 </div>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Cruciverba</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #fafafa;
-      text-align: center;
-    }
-    table {
-      margin: auto;
-      border-collapse: collapse;
-    }
-    td {
-      border: 1px solid #000;
-      width: 35px;
-      height: 35px;
-    }
-    input {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      font-size: 18px;
-      border: none;
-      text-transform: uppercase;
-    }
-    .black {
-      background: #000;
-    }
-    .nav {
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-
-<h2>Cruciverba – Lisa Meitner</h2>
-
-<table>
-  <tr>
-    <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
-  </tr>
-  <tr>
-    <td class="black"></td><td class="black"></td><td><input></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-  </tr>
-  <tr>
-    <td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td>
-  </tr>
-</table>
-
-<p><b>Orizzontali</b><br>
-1. Cognome della fisica austriaca (7)<br>
-2. Fenomeno nucleare studiato da Meitner (7)
-</p>
-
-<p><b>Verticale</b><br>
-1. Parte centrale dell’atomo (6)
-</p>
-
-<div class="nav">
-  <a href="pagina1.html">← Indietro</a>
+<!-- PRIMA PAGINA -->
+<div class="page" id="pagina1">
+  <h2>Prima pagina</h2>
+  <img src="Screenshot_2025-12-23-09-20-49-500_com.mi.globalbrowser-edit.jpg" alt="Prima pagina rivista">
+  <div class="nav">
+    <button onclick="showPage('copertina')">← Indietro</button>
+    <button onclick="showPage('cruciverba')">Avanti →</button>
+  </div>
 </div>
 
+<!-- CRUCIVERBA -->
+<div class="page" id="cruciverba">
+  <h2>Cruciverba Interattivo</h2>
+
+  <div class="cruciverba">
+    <!-- Esempio griglia 10x10, puoi modificare parole/incroci reali -->
+    <!-- Riga 1 -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <!-- Riga 2 -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <!-- Riga 3 -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <!-- Riga 4 -->
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+  </div>
+
+  <div style="max-width:600px;margin:20px auto;text-align:left;">
+    <h3>Indizi</h3>
+    <ol>
+      <li>MEITNER - Cognome della fisica austriaca co-scopritrice della fissione nucleare.</li>
+      <li>LISAMEITNER - Nome completo della scienziata che fuggì dalla Germania nel 1938.</li>
+      <li>FISSIONE - Fenomeno nucleare studiato e interpretato da Lisa Meitner.</li>
+      <li>URANIO - Elemento chimico al centro delle ricerche di Meitner.</li>
+      <li>HAHN - Chimico con cui Meitner collaborò a lungo.</li>
+      <li>NUCLEO - Parte centrale dell’atomo che si divide durante la fissione.</li>
+      <li>VIENNA - Città dove Lisa Meitner nacque nel 1878.</li>
+      <li>DONNA - Inizio della carriera scientifica in un campo allora quasi esclusivamente maschile.</li>
+      <li>NAZISMO - Ideologia dalla quale Meitner dovette fuggire nel 1938.</li>
+      <li>SCIENZA - Ambito in cui Lisa Meitner lasciò un segno importante.</li>
+    </ol>
+  </div>
+
+  <div class="nav">
+    <button onclick="showPage('pagina1')">← Indietro</button>
+  </div>
+</div>
+
+<script>
+function showPage(id){
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.style.display='none');
+  document.getElementById(id).style.display='block';
+}
+</script>
+
 </body>
 </html>
-
